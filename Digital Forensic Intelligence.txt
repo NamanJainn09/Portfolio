@@ -1,0 +1,248 @@
+# 🧪 Digital Forensic Intelligence Portfolio
+## Interactive · Evidence-Driven · Explainable
+
+---
+
+## 0. META
+
+profile:
+  name: Naman
+  primary_identity: Forensic Intelligence | AI Systems
+  secondary_identity: Cognitive & Bio-Signal Analysis
+  tone: analytical, investigative, precise
+  interaction_mode: evidence-driven
+  narrative_model: forensic investigation
+  last_updated: 2026-02
+
+---
+
+## 1. CASE INITIATION
+
+You are entering an active digital investigation.  
+All information presented is evidence-backed, traceable, and reproducible.
+
+Case Officer: Naman  
+Domains: Forensic Science · AI · Cybersecurity · Cognitive Signals  
+Operational Model: Evidence → Analysis → Reconstruction → Findings
+
+---
+
+## 2. INVESTIGATOR PROFILE
+
+### Identity
+- Full-time M.Sc. Forensic Science candidate
+- UGC NET (Forensic Science) qualified
+- Academic progression: Applied Botany → Forensic Science → AI Systems
+
+### Core Perspective
+I approach technical systems the same way a forensic examiner approaches a crime scene:
+- Preserve evidence
+- Eliminate assumptions
+- Reconstruct events
+- Defend conclusions under scrutiny
+
+### Operating Principle
+If a model cannot explain itself under cross-examination, it is not production-ready.
+
+---
+
+## 3. EVIDENCE SOURCES
+
+### Digital Evidence
+- Disk images (NTFS, FAT)
+- Mobile device extractions
+- System and application logs
+- Network traffic captures (PCAP)
+
+### Computational Evidence
+- Structured datasets
+- Unstructured text
+- Audio recordings
+- Model outputs and embeddings
+
+### Cognitive / Bio Evidence
+- EEG signal streams
+- Brain–computer interface data
+- Behavioral and response patterns
+
+### Tools of Acquisition
+- FTK Imager
+- Cellebrite UFED
+- Autopsy
+- Wireshark
+- Volatility
+
+---
+
+## 4. ANALYSIS LAB
+
+### Forensic Analysis
+- File system reconstruction
+- Artifact correlation
+- Timeline creation
+- Evidence validation
+
+### AI and Machine Learning
+- Natural language processing
+- Entity extraction and classification
+- Pattern detection and clustering
+- Bias and false-positive analysis
+
+### DFIR and SOC Methodology
+- Log correlation
+- Incident triage
+- Root-cause analysis
+- Threat modeling
+
+### Cognitive Interpretation
+- Signal-to-noise separation
+- Human behavior inference
+- Stress and anomaly markers
+
+---
+
+## 5. RECONSTRUCTION ENGINE
+
+### Event Reconstruction Pipeline
+Evidence → Feature Extraction → Model Inference → Timeline → Interpretation
+
+### Design Philosophy
+- Every transformation is traceable
+- Every inference is explainable
+- Every output is defensible
+
+### Failure Handling
+- Uncertainty tagging
+- Confidence scoring
+- Manual review checkpoints
+
+---
+
+## 6. CASE FILES
+
+Projects are treated as forensic cases, not demonstrations.
+
+---
+
+### CASE 001 — Automated Zero-FIR System
+
+Case Summary  
+Automated FIR drafting system using Hindi-language audio inputs across multiple dialects.
+
+Evidence
+- Regional dialect audio recordings
+- Speech-to-text transcripts
+- Extracted geographic and victim entities
+
+Analysis
+- ASR and NLP processing pipeline
+- Named Entity Recognition
+- Rule-based and semantic verification
+
+Reconstruction
+Audio → Text → Entity Extraction → Structured FIR Draft
+
+Outcome
+- Reduced manual workload
+- Standardized legal documentation
+- Lower interpretation bias
+
+---
+
+### CASE 002 — Digital Forensics Laboratory Exposure
+
+Evidence Handled
+- Disk images
+- Mobile device data
+- Volatile memory dumps
+
+Analysis Techniques
+- Deleted file recovery
+- Artifact correlation
+- Timeline reconstruction
+
+Tools Used
+FTK Imager · Autopsy · Cellebrite UFED
+
+Outcome
+Court-defensible forensic analysis experience.
+
+---
+
+### CASE 003 — NeuroCognitive Signal Analysis
+
+Evidence
+- EEG data streams
+- Motor imagery and cognitive response signals
+
+Analysis
+- Noise filtering
+- Feature extraction
+- Pattern recognition
+
+Forensic Relevance
+Understanding human behavior under cognitive load.
+
+---
+
+## 7. FINDINGS
+
+### Key Observations
+- Most AI failures are explainability failures
+- Human behavior is the missing variable in many systems
+- Forensics and AI converge at accountability
+
+### Differentiator
+I do not just build models.  
+I build systems that can testify.
+
+---
+
+## 8. APPLICATION TO EDUCATION AND ASSESSMENT
+
+### Assessment Integrity
+- Behavioral anomaly detection
+- Cognitive stress indicators
+- Explainable flags instead of black-box decisions
+
+### Learning Analytics
+- Signal versus noise separation
+- Evidence-based personalization
+
+### AI Governance
+- Audit trails
+- Model transparency
+- Bias detection and mitigation
+
+---
+
+## 9. CREDENTIALS
+
+- ISO/IEC 27001:2022 Information Security Associate
+- Cisco Junior Cybersecurity Analyst
+- CDAC Windows Forensics
+- EC-Council Programs
+- Fortinet NSE 1
+
+---
+
+## 10. CONTACT
+
+### Engagement Philosophy
+Open to:
+- AI system design
+- Assessment integrity research
+- Forensic-driven analytics
+
+### Reach
+LinkedIn  
+Email  
+Portfolio Repository
+
+---
+
+## 11. SYSTEM FOOTER
+
+This portfolio is evidence-driven, version-controlled, and continuously evolving.
+
+Truth survives scrutiny.

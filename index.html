@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naman Jain · Forensic Intelligence & AI Systems</title>
+    <meta name="description"
+        content="Forensic Intelligence | AI Systems | Cognitive Analysis — Portfolio of Naman Jain. Where forensic science meets artificial intelligence.">
+    <meta property="og:title" content="Naman Jain · Forensic Intelligence & AI Systems">
+    <meta property="og:description"
+        content="Where forensic science meets artificial intelligence. Evidence-driven AI systems that can testify.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/index.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader">
+        <div class="loader__inner">
+            <div class="loader__badge">CASE FILE</div>
+            <div class="loader__bar-track">
+                <div class="loader__bar-fill" id="loaderBar"></div>
+            </div>
+            <div class="loader__text" id="loaderText">Initializing investigation...</div>
+        </div>
+    </div>
+
+    <!-- Three.js Canvas -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div id="cursor" class="custom-cursor">
+        <div class="cursor__dot"></div>
+        <div class="cursor__ring"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- ===== SECTION 1: Hero / Case Initiation ===== -->
+        <section id="hero" class="section section--hero">
+            <!-- Animated gradient blobs -->
+            <div class="hero__blobs">
+                <div class="hero__blob hero__blob--1"></div>
+                <div class="hero__blob hero__blob--2"></div>
+                <div class="hero__blob hero__blob--3"></div>
+            </div>
+            <!-- Floating forensic markers -->
+            <div class="hero__floating-elements">
+                <div class="floating-marker floating-marker--1 mono">▹ CASE #2026-NJ</div>
+                <div class="floating-marker floating-marker--2 mono">◈ NFSU × AI</div>
+                <div class="floating-marker floating-marker--3 mono">⬡ UGC NET 2×</div>
+                <div class="floating-marker floating-marker--4 mono">△ MHA, GOI</div>
+            </div>
+            <div class="hero__container">
+                <div class="hero__badge">
+                    <span class="hero__badge-dot"></span>
+                    <span>CASE INITIATED</span>
+                </div>
+                <h1 class="hero__name" data-animate="reveal">
+                    <span class="hero__name-line">Naman Jain</span>
+                </h1>
+                <div class="hero__tagline" data-animate="typing">
+                    <span class="mono">Forensic Intelligence</span>
+                    <span class="hero__divider">|</span>
+                    <span class="mono">AI Systems</span>
+                    <span class="hero__divider">|</span>
+                    <span class="mono">Cognitive Analysis</span>
+                </div>
+                <p class="hero__subtitle" data-animate="fade-up">
+                    Building AI systems with the rigor of forensic examination.<br>
+                    Every inference explainable. Every output defensible.
+                </p>
+                <!-- Hero stats -->
+                <div class="hero__stats" data-animate="fade-up">
+                    <div class="hero__stat">
+                        <span class="hero__stat-value mono" data-count="6">0</span>
+                        <span class="hero__stat-label">Certifications</span>
+                    </div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-value mono" data-count="1">0</span>
+                        <span class="hero__stat-label">Active Cases</span>
+                    </div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-value mono" data-count="2">0</span>
+                        <span class="hero__stat-label">NET Clears</span>
+                    </div>
+                </div>
+                <div class="hero__scroll-indicator">
+                    <span class="mono">Scroll to investigate</span>
+                    <div class="hero__scroll-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 5v14M5 12l7 7 7-7" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <!-- Orbit ring visual -->
+            <div class="hero__orbit">
+                <div class="hero__orbit-ring"></div>
+                <div class="hero__orbit-ring hero__orbit-ring--2"></div>
+                <div class="hero__orbit-dot"></div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 2: Investigator Profile ===== -->
+        <section id="profile" class="section section--profile">
+            <div class="section__container">
+                <div class="section__header">
+                    <span class="section__number mono">02</span>
+                    <h2 class="section__title" data-animate="reveal">Investigator Profile</h2>
+                </div>
+                <div class="profile__grid">
+                    <div class="profile__bio" data-animate="fade-up">
+                        <p class="profile__lead">I approach technical systems the same way a forensic examiner
+                            approaches a crime scene — <strong>preserve evidence, eliminate assumptions, reconstruct
+                                events, defend conclusions under scrutiny.</strong></p>
+                        <p>M.Sc. Forensic Science student at <strong>National Forensic Sciences University (NFSU),
+                                Gandhinagar</strong> — India's premier forensic institution under the <strong>Ministry
+                                of Home Affairs, Government of India</strong>. <strong>Two-time UGC NET
+                                qualified</strong> in Forensic Science, with a
+                            multidisciplinary background spanning biological sciences, forensic science, and AI systems.
+                        </p>
+                        <div class="profile__philosophy">
+                            <blockquote>
+                                <p>"If a model cannot explain itself under cross-examination, it is not
+                                    production-ready."</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="profile__timeline" data-animate="stagger">
+                        <div class="timeline__item timeline__item--highlight">
+                            <div class="timeline__logo">
+                                <img src="images/ugc.jpg" alt="UGC NET Logo">
+                            </div>
+                            <div class="timeline__content">
+                                <h3>UGC NET Qualified — Twice</h3>
+                                <p>Forensic Science · National Eligibility · Cleared 2×</p>
+                            </div>
+                            <span class="timeline__year mono">2025</span>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__logo">
+                                <img src="images/nfsu.jpg" alt="NFSU Logo">
+                            </div>
+                            <div class="timeline__content">
+                                <h3>M.Sc. Forensic Sciences</h3>
+                                <p>NFSU, Gandhinagar · Cyberforensics · MHA, GOI</p>
+                            </div>
+                            <span class="timeline__year mono">2024–Present</span>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__logo">
+                                <img src="images/dei.jpg" alt="DEI Logo">
+                            </div>
+                            <div class="timeline__content">
+                                <h3>B.Sc. (Hons.)</h3>
+                                <p>Dayalbagh Educational Institute, Agra · 8.13 CGPA</p>
+                            </div>
+                            <span class="timeline__year mono">2021–2024</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Miles-targeted block -->
+                <div class="profile__domain-block" data-animate="fade-up">
+                    <div class="domain-block__header">
+                        <span class="domain-block__icon">⬡</span>
+                        <h3>AI × Domain Expertise = Impact</h3>
+                    </div>
+                    <p>I don't just build AI. I apply AI where <strong>domain expertise matters</strong>. Forensics,
+                        education, cognitive science. The same approach that makes an accountant AI-ready makes a
+                        forensic examiner AI-powered. True AI transformation requires bridging deep domain knowledge
+                        with intelligent systems.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== INTERSTITIAL 1 ===== -->
+        <div class="interstitial" data-animate="fade-up">
+            <div class="interstitial__container">
+                <p class="interstitial__text">Every investigation starts with <strong>evidence.</strong></p>
+            </div>
+        </div>
+
+        <!-- ===== SECTION 3: Evidence Sources / Skills ===== -->
+        <section id="evidence" class="section section--evidence">
+            <div class="section__container">
+                <div class="section__header">
+                    <span class="section__number mono">03</span>
+                    <h2 class="section__title" data-animate="reveal">Evidence Sources</h2>
+                </div>
+                <p class="section__subtitle">Drag to explore →</p>
+                <div class="evidence__scroll-track" data-animate="stagger">
+                    <div class="evidence__card">
+                        <div class="evidence__card-status mono">INTEGRITY: VERIFIED</div>
+                        <span class="evidence__card-num mono">01</span>
+                        <div class="evidence__card-icon">🖥️</div>
+                        <h3>Digital Artefacts</h3>
+                        <ul>
+                            <li>Disk images (E01 · Raw)</li>
+                            <li>Mobile device extractions</li>
+                            <li>Kernel memory dumps</li>
+                            <li>Network packet (PCAP) logs</li>
+                        </ul>
+                    </div>
+                    <div class="evidence__card">
+                        <div class="evidence__card-status mono">CORE: INTELLIGENCE</div>
+                        <span class="evidence__card-num mono">02</span>
+                        <div class="evidence__card-icon">🧩</div>
+                        <h3>Intelligence Engineering</h3>
+                        <ul>
+                            <li>Advanced Prompt Design</li>
+                            <li>Context Window Modelling</li>
+                            <li>RAG Pipeline Architecture</li>
+                            <li>LLM Safety & Guardrails</li>
+                        </ul>
+                    </div>
+                    <div class="evidence__card">
+                        <div class="evidence__card-status mono">ANALYSIS: ACTIVE</div>
+                        <span class="evidence__card-num mono">03</span>
+                        <div class="evidence__card-icon">📊</div>
+                        <h3>Computational Intel</h3>
+                        <ul>
+                            <li>NLP & Semantic analysis</li>
+                            <li>Named Entity Recognition</li>
+                            <li>Sentiment & Dialect processing</li>
+                            <li>Synthetic data generation</li>
+                        </ul>
+                    </div>
+                    <div class="evidence__card">
+                        <div class="evidence__card-status mono">SIGNAL: ACQUIRED</div>
+                        <span class="evidence__card-num mono">04</span>
+                        <div class="evidence__card-icon">🧠</div>
+                        <h3>Neuro-Forensics</h3>
+                        <ul>
+                            <li>EEG signal processing</li>
+                            <li>P300 & N170 brainwave analysis</li>
+                            <li>Cognitive load assessment</li>
+                            <li>BCI signal interpretation</li>
+                        </ul>
+                    </div>
+                    <div class="evidence__card">
+                        <div class="evidence__card-status mono">STACK: CERTIFIED</div>
+                        <span class="evidence__card-num mono">05</span>
+                        <div class="evidence__card-icon">🔧</div>
+                        <h3>Forensic Stack</h3>
+                        <ul>
+                            <li>FTK Imager · Autopsy</li>
+                            <li>Wireshark · Volatility</li>
+                            <li>Python · Transformers</li>
+                            <li>Cellebrite UFED</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== MARQUEE TICKER ===== -->
+        <div class="marquee">
+            <div class="marquee__track">
+                <div class="marquee__content">
+                    <span>Python</span><span class="marquee__dot">◆</span>
+                    <span>Hugging Face</span><span class="marquee__dot">◆</span>
+                    <span>TensorFlow</span><span class="marquee__dot">◆</span>
+                    <span>PyTorch</span><span class="marquee__dot">◆</span>
+                    <span>Autopsy</span><span class="marquee__dot">◆</span>
+                    <span>Wireshark</span><span class="marquee__dot">◆</span>
+                    <span>FTK Imager</span><span class="marquee__dot">◆</span>
+                    <span>Volatility</span><span class="marquee__dot">◆</span>
+                    <span>Chain-of-Thought</span><span class="marquee__dot">◆</span>
+                    <span>Prompt Engineering</span><span class="marquee__dot">◆</span>
+                    <span>LLMs</span><span class="marquee__dot">◆</span>
+                    <span>Vector Databases</span><span class="marquee__dot">◆</span>
+                    <span>NLP</span><span class="marquee__dot">◆</span>
+                    <span>EEG Analysis</span><span class="marquee__dot">◆</span>
+                    <span>Cellebrite</span><span class="marquee__dot">◆</span>
+                    <span>Nmap</span><span class="marquee__dot">◆</span>
+                </div>
+                <div class="marquee__content" aria-hidden="true">
+                    <span>Python</span><span class="marquee__dot">◆</span>
+                    <span>Hugging Face</span><span class="marquee__dot">◆</span>
+                    <span>TensorFlow</span><span class="marquee__dot">◆</span>
+                    <span>PyTorch</span><span class="marquee__dot">◆</span>
+                    <span>Autopsy</span><span class="marquee__dot">◆</span>
+                    <span>Wireshark</span><span class="marquee__dot">◆</span>
+                    <span>FTK Imager</span><span class="marquee__dot">◆</span>
+                    <span>Volatility</span><span class="marquee__dot">◆</span>
+                    <span>Chain-of-Thought</span><span class="marquee__dot">◆</span>
+                    <span>Prompt Engineering</span><span class="marquee__dot">◆</span>
+                    <span>LLMs</span><span class="marquee__dot">◆</span>
+                    <span>Vector Databases</span><span class="marquee__dot">◆</span>
+                    <span>NLP</span><span class="marquee__dot">◆</span>
+                    <span>EEG Analysis</span><span class="marquee__dot">◆</span>
+                    <span>Cellebrite</span><span class="marquee__dot">◆</span>
+                    <span>Nmap</span><span class="marquee__dot">◆</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== SECTION 4: Analysis Lab / Pipeline ===== -->
+        <section id="analysis" class="section section--analysis">
+            <div class="section__container">
+                <div class="section__header">
+                    <span class="section__number mono">04</span>
+                    <h2 class="section__title" data-animate="reveal">Analysis Lab</h2>
+                </div>
+                <p class="section__subtitle">Click a step to see it in action ↓</p>
+                <div class="pipeline-interactive" data-animate="pipeline">
+                    <!-- Step tabs -->
+                    <div class="pipeline__tabs">
+                        <button class="pipeline__tab is-active" data-step="1">
+                            <span class="pipeline__tab-num mono">01</span>
+                            <span class="pipeline__tab-name">Evidence</span>
+                        </button>
+                        <div class="pipeline__tab-connector"></div>
+                        <button class="pipeline__tab" data-step="2">
+                            <span class="pipeline__tab-num mono">02</span>
+                            <span class="pipeline__tab-name">Extraction</span>
+                        </button>
+                        <div class="pipeline__tab-connector"></div>
+                        <button class="pipeline__tab" data-step="3">
+                            <span class="pipeline__tab-num mono">03</span>
+                            <span class="pipeline__tab-name">Inference</span>
+                        </button>
+                        <div class="pipeline__tab-connector"></div>
+                        <button class="pipeline__tab" data-step="4">
+                            <span class="pipeline__tab-num mono">04</span>
+                            <span class="pipeline__tab-name">Timeline</span>
+                        </button>
+                        <div class="pipeline__tab-connector"></div>
+                        <button class="pipeline__tab" data-step="5">
+                            <span class="pipeline__tab-num mono">05</span>
+                            <span class="pipeline__tab-name">Report</span>
+                        </button>
+                    </div>
+
+                    <!-- Demo panels -->
+                    <div class="pipeline__panels">
+                        <!-- Panel 1: Evidence Collection -->
+                        <div class="pipeline__panel is-active" data-panel="1">
+                            <div class="demo-terminal">
+                                <div class="demo-terminal__bar">
+                                    <span class="demo-terminal__dot demo-terminal__dot--red"></span>
+                                    <span class="demo-terminal__dot demo-terminal__dot--yellow"></span>
+                                    <span class="demo-terminal__dot demo-terminal__dot--green"></span>
+                                    <span class="demo-terminal__title mono">evidence_collection.sh</span>
+                                </div>
+                                <div class="demo-terminal__body mono">
+                                    <div class="demo-line"><span class="demo-prompt">$</span> ftk_imager --acquire
+                                        /dev/sda1 --format E01</div>
+                                    <div class="demo-line demo-output">▸ Acquiring disk image... [████████████████] 100%
+                                    </div>
+                                    <div class="demo-line demo-output">▸ Image size: 128 GB → compressed: 47.3 GB</div>
+                                    <div class="demo-line"><span class="demo-prompt">$</span> sha256sum evidence_001.E01
+                                    </div>
+                                    <div class="demo-line demo-hash">a3f8e2b1...c94d <span class="demo-verified">✓
+                                            VERIFIED</span></div>
+                                    <div class="demo-line"><span class="demo-prompt">$</span> cellebrite extract
+                                        --device iPhone14 --full</div>
+                                    <div class="demo-line demo-output">▸ 12,847 artifacts extracted</div>
+                                    <div class="demo-line demo-output">▸ Chain of custody: <span
+                                            class="demo-verified">PRESERVED</span></div>
+                                </div>
+                            </div>
+                            <p class="pipeline__panel-caption">Raw data acquisition with cryptographic integrity
+                                verification and full chain-of-custody preservation.</p>
+                        </div>
+
+                        <!-- Panel 2: Feature Extraction -->
+                        <div class="pipeline__panel" data-panel="2">
+                            <div class="demo-ner">
+                                <div class="demo-ner__header mono">NER Entity Extraction — Hindi FIR Complaint</div>
+                                <div class="demo-ner__text">
+                                    <span class="demo-ner__entity demo-ner__entity--person">रमेश कुमार</span> ने
+                                    <span class="demo-ner__entity demo-ner__entity--date">15 जनवरी 2025</span> को
+                                    <span class="demo-ner__entity demo-ner__entity--location">दिल्ली</span> में
+                                    <span class="demo-ner__entity demo-ner__entity--crime">धमकी दी</span> और
+                                    <span class="demo-ner__entity demo-ner__entity--evidence">मोबाइल फोन छीन लिया</span>
+                                </div>
+                                <div class="demo-ner__legend">
+                                    <span class="demo-ner__tag demo-ner__tag--person">PERSON</span>
+                                    <span class="demo-ner__tag demo-ner__tag--date">DATE</span>
+                                    <span class="demo-ner__tag demo-ner__tag--location">LOCATION</span>
+                                    <span class="demo-ner__tag demo-ner__tag--crime">CRIME</span>
+                                    <span class="demo-ner__tag demo-ner__tag--evidence">EVIDENCE</span>
+                                </div>
+                            </div>
+                            <p class="pipeline__panel-caption">Named Entity Recognition across Hindi & English text —
+                                extracting persons, dates, locations, offences, and evidence items.</p>
+                        </div>
+
+                        <!-- Panel 3: Model Inference -->
+                        <div class="pipeline__panel" data-panel="3">
+                            <div class="demo-inference">
+                                <div class="demo-inference__header mono">Classification Output</div>
+                                <div class="demo-inference__results">
+                                    <div class="demo-inference__row">
+                                        <span class="demo-inference__label">IPC Section 354</span>
+                                        <div class="demo-inference__bar-track">
+                                            <div class="demo-inference__bar" style="width: 94%"></div>
+                                        </div>
+                                        <span class="demo-inference__score mono">0.94</span>
+                                    </div>
+                                    <div class="demo-inference__row">
+                                        <span class="demo-inference__label">IPC Section 506</span>
+                                        <div class="demo-inference__bar-track">
+                                            <div class="demo-inference__bar demo-inference__bar--secondary"
+                                                style="width: 87%"></div>
+                                        </div>
+                                        <span class="demo-inference__score mono">0.87</span>
+                                    </div>
+                                    <div class="demo-inference__row">
+                                        <span class="demo-inference__label">IPC Section 379</span>
+                                        <div class="demo-inference__bar-track">
+                                            <div class="demo-inference__bar demo-inference__bar--tertiary"
+                                                style="width: 71%"></div>
+                                        </div>
+                                        <span class="demo-inference__score mono">0.71</span>
+                                    </div>
+                                </div>
+                                <div class="demo-inference__meta mono">
+                                    Severity: <span class="demo-severity demo-severity--high">HIGH</span> ·
+                                    Bias check: <span class="demo-verified">PASSED</span> ·
+                                    Explainability: <span class="demo-verified">AVAILABLE</span>
+                                </div>
+                            </div>
+                            <p class="pipeline__panel-caption">Multi-label legal classification with confidence scoring,
+                                severity assessment, and built-in bias analysis.</p>
+                        </div>
+
+                        <!-- Panel 4: Timeline Reconstruction -->
+                        <div class="pipeline__panel" data-panel="4">
+                            <div class="demo-timeline">
+                                <div class="demo-timeline__header mono">Event Reconstruction</div>
+                                <div class="demo-timeline__events">
+                                    <div class="demo-timeline__event">
+                                        <span class="demo-timeline__time mono">14:23 IST</span>
+                                        <div class="demo-timeline__dot"></div>
+                                        <span class="demo-timeline__desc">Victim receives threatening message via
+                                            WhatsApp</span>
+                                    </div>
+                                    <div class="demo-timeline__event">
+                                        <span class="demo-timeline__time mono">14:41 IST</span>
+                                        <div class="demo-timeline__dot"></div>
+                                        <span class="demo-timeline__desc">Location data shows suspect approaching
+                                            victim's area</span>
+                                    </div>
+                                    <div class="demo-timeline__event demo-timeline__event--critical">
+                                        <span class="demo-timeline__time mono">15:07 IST</span>
+                                        <div class="demo-timeline__dot demo-timeline__dot--red"></div>
+                                        <span class="demo-timeline__desc">Incident occurs — mobile device seized
+                                            forcefully</span>
+                                    </div>
+                                    <div class="demo-timeline__event">
+                                        <span class="demo-timeline__time mono">15:32 IST</span>
+                                        <div class="demo-timeline__dot"></div>
+                                        <span class="demo-timeline__desc">FIR filed at nearest police station</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="pipeline__panel-caption">Automated event correlation across digital evidence
+                                sources — creating a court-defensible timeline.</p>
+                        </div>
+
+                        <!-- Panel 5: Report / Interpretation -->
+                        <div class="pipeline__panel" data-panel="5">
+                            <div class="demo-report">
+                                <div class="demo-report__header">
+                                    <span class="demo-report__badge mono">ZERO-FIR DRAFT</span>
+                                    <span class="demo-report__id mono">#ZF-2025-00847</span>
+                                </div>
+                                <div class="demo-report__body">
+                                    <div class="demo-report__field">
+                                        <span class="demo-report__label mono">APPLICABLE SECTIONS</span>
+                                        <span class="demo-report__value">IPC 354, 506, 379</span>
+                                    </div>
+                                    <div class="demo-report__field">
+                                        <span class="demo-report__label mono">SEVERITY</span>
+                                        <span class="demo-report__value"><span
+                                                class="demo-severity demo-severity--high">HIGH</span></span>
+                                    </div>
+                                    <div class="demo-report__field">
+                                        <span class="demo-report__label mono">EVIDENCE INTEGRITY</span>
+                                        <span class="demo-report__value"><span class="demo-verified">✓ ALL
+                                                VERIFIED</span></span>
+                                    </div>
+                                    <div class="demo-report__field">
+                                        <span class="demo-report__label mono">CONFIDENCE</span>
+                                        <span class="demo-report__value">94.2% — Model explainability report
+                                            attached</span>
+                                    </div>
+                                </div>
+                                <div class="demo-report__verdict mono">SYSTEM VERDICT: Ready for judicial review</div>
+                            </div>
+                            <p class="pipeline__panel-caption">Auto-generated Zero-FIR draft with explainable findings,
+                                traceable evidence chain, and confidence scoring.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 5: Case Files / Projects ===== -->
+        <section id="cases" class="section section--cases">
+            <div class="section__container">
+                <div class="section__header">
+                    <span class="section__number mono">05</span>
+                    <h2 class="section__title" data-animate="reveal">Case Files</h2>
+                </div>
+                <div class="cases__grid" data-animate="stagger">
+                    <!-- Case 001 -->
+                    <div class="case__card" data-case="001">
+                        <div class="case__card-header">
+                            <span class="case__number mono">CASE 001</span>
+                            <span class="case__badge case__badge--active">ACTIVE</span>
+                        </div>
+                        <h3 class="case__title">Nari Rakshak — Automated Zero-FIR System</h3>
+                        <p class="case__summary">AI-powered system that processes Hindi audio complaints across regional
+                            dialects to automatically generate legally structured Zero-FIR documents for crimes against
+                            women.</p>
+                        <div class="case__details">
+                            <div class="case__detail-section">
+                                <h4>Evidence</h4>
+                                <p>Regional dialect audio recordings · Speech-to-text transcripts · Extracted geographic
+                                    and victim entities</p>
+                            </div>
+                            <div class="case__detail-section">
+                                <h4>Analysis</h4>
+                                <p>ASR and NLP processing pipeline · Named Entity Recognition · IPC section
+                                    classification · Severity assessment</p>
+                            </div>
+                            <div class="case__detail-section">
+                                <h4>Tools Used</h4>
+                                <div class="case__tools">
+                                    <span class="case__tool-tag">Python</span>
+                                    <span class="case__tool-tag">Flask</span>
+                                    <span class="case__tool-tag">Whisper</span>
+                                    <span class="case__tool-tag">spaCy</span>
+                                    <span class="case__tool-tag">Gemini API</span>
+                                </div>
+                            </div>
+                            <div class="case__detail-section">
+                                <h4>Reconstruction</h4>
+                                <div class="case__pipeline mono">Audio → ASR Transcription → NER → Legal Classification
+                                    → Zero-FIR Draft</div>
+                            </div>
+                            <div class="case__detail-section">
+                                <h4>Outcome</h4>
+                                <ul>
+                                    <li>Reduced manual FIR drafting workload</li>
+                                    <li>Standardized legal documentation</li>
+                                    <li>Lower interpretation bias across dialects</li>
+                                    <li>15,000+ synthetic Hindi complaints dataset</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <canvas id="voice-canvas" class="case__eeg-canvas"></canvas>
+                        <button class="case__toggle mono">View Case Details →</button>
+                    </div>
+
+                    <!-- Case 002 -->
+                    <div class="case__card" data-case="002">
+                        <div class="case__card-header">
+                            <span class="case__number mono">CASE 002</span>
+                            <span class="case__badge case__badge--closed">TOOL</span>
+                        </div>
+                        <h3 class="case__title">Hex Repair — Image Header Recovery</h3>
+                        <p class="case__summary">Forensic-grade tool that detects and repairs corrupted image file
+                            headers at the hex level, restoring unreadable evidence files.</p>
+                        <div class="case__details">
+                            <div class="case__detail-section">
+                                <h4>Evidence</h4>
+                                <p>Corrupted JPEG, PNG, GIF, and BMP files · Damaged magic bytes · Missing or malformed
+                                    file headers</p>
+                            </div>
+                            <div class="case__detail-section">
+                                <h4>Analysis</h4>
+                                <p>Hex-level format detection · Magic byte signature matching · Header structure
+                                    validation · Byte-by-byte diff comparison</p>
+                            </div>
+                            <div class="case__detail-section">
+                                <h4>Tools Used</h4>
+                                <div class="case__tools">
+                                    <span class="case__tool-tag">React</span>
+                                    <span class="case__tool-tag">TypeScript</span>
+                                    <span class="case__tool-tag">Vite</span>
+                                    <span class="case__tool-tag">File API</span>
+                                    <span class="case__tool-tag">Uint8Array</span>
+                                </div>
+                            </div>
+                            <div class="case__detail-section">
+                                <h4>Reconstruction</h4>
+                                <div class="case__pipeline mono">Upload → Format Detection → Header Repair → Hex Diff →
+                                    Download</div>
+                            </div>
+                            <div class="case__detail-section">
+                                <h4>Outcome</h4>
+                                <ul>
+                                    <li>Recovers unreadable image evidence</li>
+                                    <li>Visual hex diff showing exact byte changes</li>
+                                    <li>Drag-and-drop browser-based interface</li>
+                                    <li>No server dependency — runs entirely client-side</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <canvas id="hex-canvas" class="case__eeg-canvas"></canvas>
+                        <button class="case__toggle mono">View Case Details →</button>
+                    </div>
+
+                    <!-- Case 003 -->
+                    <div class="case__card" data-case="003">
+                        <div class="case__card-header">
+                            <span class="case__number mono">CASE 003</span>
+                            <span class="case__badge case__badge--research">DELIVERED</span>
+                        </div>
+                        <h3 class="case__title">NeuroCognitive Signal Analysis — OpenBCI</h3>
+                        <p class="case__summary">EEG-based cognitive analysis project for a NeuroTech company using
+                            OpenBCI hardware. Included delivering an OpenBCI workshop.</p>
+                        <div class="case__details">
+                            <div class="case__detail-section">
+                                <h4>Evidence</h4>
+                                <p>Live EEG data streams · Motor imagery signals · Cognitive load response patterns</p>
+                            </div>
+                            <div class="case__detail-section">
+                                <h4>Analysis</h4>
+                                <p>Signal noise filtering · Feature extraction · Cognitive pattern recognition ·
+                                    Behavioral anomaly detection</p>
+                            </div>
+                            <div class="case__detail-section">
+                                <h4>Tools Used</h4>
+                                <div class="case__tools">
+                                    <span class="case__tool-tag">OpenBCI</span>
+                                    <span class="case__tool-tag">EEG</span>
+                                    <span class="case__tool-tag">Signal Processing</span>
+                                </div>
+                            </div>
+                            <div class="case__detail-section">
+                                <h4>Forensic Relevance</h4>
+                                <p>Understanding human behavior under cognitive load — applications in assessment
+                                    integrity, deception detection, and behavioral forensics.</p>
+                            </div>
+                            <div class="case__detail-section">
+                                <h4>Outcome</h4>
+                                <ul>
+                                    <li>Delivered project to NeuroTech company</li>
+                                    <li>Conducted OpenBCI workshop</li>
+                                    <li>Hands-on BCI signal analysis experience</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <canvas id="eeg-canvas" class="case__eeg-canvas"></canvas>
+                        <button class="case__toggle mono">View Case Details →</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 6: Field Operations ===== -->
+        <section id="experience" class="section section--experience">
+            <div class="section__container">
+                <div class="section__header">
+                    <span class="section__number mono">06</span>
+                    <h2 class="section__title" data-animate="reveal">Field Operations</h2>
+                </div>
+                
+                <div class="experience__grid">
+                    <!-- Internships Column -->
+                    <div class="experience__column">
+                        <div class="column__header">
+                            <span class="column__icon">💼</span>
+                            <h3>Professional Internships</h3>
+                        </div>
+                        <div class="experience__list" data-animate="stagger">
+                            <!-- SFSL -->
+                            <div class="experience__card" data-experience="sfsl">
+                                <div class="experience__card-summary">
+                                    <span class="experience__org">State Forensic Science Laboratory</span>
+                                    <div class="experience__expand-icon">＋</div>
+                                </div>
+                                <div class="experience__card-details">
+                                    <div class="experience__details-inner">
+                                        <div class="experience__close-btn">×</div>
+                                        <div class="experience__meta">
+                                            <span class="experience__date mono">Jun 2025</span>
+                                            <span class="experience__location mono">Lucknow, UP</span>
+                                        </div>
+                                        <h4 class="experience__role">Forensic Division Intern</h4>
+                                        <ul class="experience__bullets">
+                                            <li>Worked across multiple forensic divisions (Cyber, Physics).</li>
+                                            <li>Performed forensic acquisition of devices using FTK Imager and Cellebrite UFED.</li>
+                                            <li>Restoration of serial numbers, soil analysis, and tensile strength analysis.</li>
+                                            <li>Assisted in handling, sealing, and documentation following proper chain of custody.</li>
+                                            <li>Applied investigative workflows including evidence validation and CCTV timeline reconstruction.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Police -->
+                            <div class="experience__card" data-experience="police">
+                                <div class="experience__card-summary">
+                                    <span class="experience__org">Police Commissionerate</span>
+                                    <div class="experience__expand-icon">＋</div>
+                                </div>
+                                <div class="experience__card-details">
+                                    <div class="experience__details-inner">
+                                        <div class="experience__close-btn">×</div>
+                                        <div class="experience__meta">
+                                            <span class="experience__date mono">Dec 2024 – Jan 2025</span>
+                                            <span class="experience__location mono">Agra, UP</span>
+                                        </div>
+                                        <h4 class="experience__role">Field Team Internship</h4>
+                                        <ul class="experience__bullets">
+                                            <li>Worked under ADCP (Crime) during a intensive field internship.</li>
+                                            <li>Processed 20+ crime scenes, gaining firsthand exposure to forensic procedures.</li>
+                                            <li>Assisted in evidence identification, collection, and packaging.</li>
+                                            <li>Observed incident handling workflows and assisted in structured documentation for security investigations.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Neuro -->
+                            <div class="experience__card" data-experience="neuro">
+                                <div class="experience__card-summary">
+                                    <span class="experience__org">NeuroCognitive Lab</span>
+                                    <div class="experience__expand-icon">＋</div>
+                                </div>
+                                <div class="experience__card-details">
+                                    <div class="experience__details-inner">
+                                        <div class="experience__close-btn">×</div>
+                                        <div class="experience__meta">
+                                            <span class="experience__date mono">Mar 2022 – Oct 2022</span>
+                                            <span class="experience__location mono">DEI, Agra</span>
+                                        </div>
+                                        <h4 class="experience__role">Research Intern</h4>
+                                        <ul class="experience__bullets">
+                                            <li>Managed EEG-based systems (OpenBCI, NeuroSky) for signal data collection.</li>
+                                            <li>Cleaned, structured, and analyzed research datasets with Python.</li>
+                                            <li>Supported experimental workflows using PsychoPy and PyGaze for behavioral analysis.</li>
+                                            <li>Maintained structured datasets and delivered analytical reports for ongoing studies.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add Global Overlay here -->
+                    <div id="experience-overlay" class="experience__overlay"></div>
+
+                    <!-- Co-curricular Column -->
+                    <div class="experience__column">
+                        <div class="column__header">
+                            <span class="column__icon">🚀</span>
+                            <h3>Engagements & Leadership</h3>
+                        </div>
+                        <div class="experience__list" data-animate="stagger">
+                            <!-- OpenBCI -->
+                            <div class="experience__card" data-experience="openbci">
+                                <div class="experience__card-summary">
+                                    <span class="experience__org">OpenBCI Workshop</span>
+                                    <div class="experience__expand-icon">＋</div>
+                                </div>
+                                <div class="experience__card-details">
+                                    <div class="experience__details-inner">
+                                        <div class="experience__close-btn">×</div>
+                                        <div class="experience__meta">
+                                            <span class="experience__date mono">May 2022</span>
+                                            <span class="experience__location mono">NeuroCognitive Lab, DEI</span>
+                                        </div>
+                                        <h4 class="experience__role">Organizer & Presenter</h4>
+                                        <ul class="experience__bullets">
+                                            <li>Introduced students to NeuroCognitive tools (EEG, OpenBCI, Backyard Brains).</li>
+                                            <li>Demonstrated DIY toolkits like the Human-to-Human Interface and MindWave.</li>
+                                            <li>Delivered a technical talk on OpenBCI and its practical forensic/research use cases.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FridaysForFuture -->
+                            <div class="experience__card" data-experience="fff">
+                                <div class="experience__card-summary">
+                                    <span class="experience__org">FridaysForFuture</span>
+                                    <div class="experience__expand-icon">＋</div>
+                                </div>
+                                <div class="experience__card-details">
+                                    <div class="experience__details-inner">
+                                        <div class="experience__close-btn">×</div>
+                                        <div class="experience__meta">
+                                            <span class="experience__date mono">2021 – 2023</span>
+                                            <span class="experience__location mono">Agra, UP</span>
+                                        </div>
+                                        <h4 class="experience__role">Active Member & Media Lead</h4>
+                                        <ul class="experience__bullets">
+                                            <li>Promoted environmental awareness and cleanliness drives at River Yamuna.</li>
+                                            <li>Handled Media Outreach for the Global Climatic Strike 2022.</li>
+                                            <li>Coordinated with ANI to manage and promote the program's media presence.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Leadership -->
+                            <div class="experience__card" data-experience="leadership">
+                                <div class="experience__card-summary">
+                                    <span class="experience__org">Leadership Roles</span>
+                                    <div class="experience__expand-icon">＋</div>
+                                </div>
+                                <div class="experience__card-details">
+                                    <div class="experience__details-inner">
+                                        <div class="experience__close-btn">×</div>
+                                        <div class="experience__meta">
+                                            <span class="experience__date mono">2021 – 2026</span>
+                                            <span class="experience__location mono">DEI & NFSU</span>
+                                        </div>
+                                        <h4 class="experience__role">General Secretary & CR</h4>
+                                        <ul class="experience__bullets">
+                                            <li><strong>General Secretary (Freshers '25, NFSU):</strong> Managed 700+ pax event.</li>
+                                            <li>Built a centralized QR system for venue entry and managed committee coordination.</li>
+                                            <li><strong>Class Representative:</strong> Elected CR for all 3 years of Bachelor's and 2 years of Master's program.</li>
+                                            <li>Mediated interests between colleagues and faculty across 5 years.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 7: Credentials Vault ===== -->
+        <section id="credentials" class="section section--credentials">
+            <div class="section__container">
+                <div class="section__header">
+                    <span class="section__number mono">07</span>
+                    <h2 class="section__title" data-animate="reveal">Credentials Vault</h2>
+                </div>
+                <div class="credentials__bento" data-animate="stagger">
+                    <div class="credential__card credential__card--featured">
+                        <div class="credential__featured-badge mono">FEATURED</div>
+                        <div class="credential__icon">🏆</div>
+                        <h3>UGC NET — Forensic Science</h3>
+                        <p>National Eligibility Test — <strong>Qualified Twice</strong></p>
+                        <span class="credential__issuer mono">UGC, Government of India</span>
+                    </div>
+                    <div class="credential__card">
+                        <div class="credential__icon">🛡️</div>
+                        <h3>ISO/IEC 27001:2022</h3>
+                        <p>Information Security Associate</p>
+                        <span class="credential__issuer mono">SkillFront</span>
+                    </div>
+                    <div class="credential__card">
+                        <div class="credential__icon">🔐</div>
+                        <h3>Junior Cybersecurity Analyst</h3>
+                        <p>Career Path Certification</p>
+                        <span class="credential__issuer mono">Cisco</span>
+                    </div>
+                    <div class="credential__card">
+                        <div class="credential__icon">💻</div>
+                        <h3>Windows Forensics</h3>
+                        <p>Digital Forensics Specialization</p>
+                        <span class="credential__issuer mono">CDAC</span>
+                    </div>
+                    <div class="credential__card">
+                        <div class="credential__icon">🌐</div>
+                        <h3>Dark Web, Anonymity & Crypto</h3>
+                        <p>Introduction Program</p>
+                        <span class="credential__issuer mono">EC-Council</span>
+                    </div>
+                    <div class="credential__card">
+                        <div class="credential__icon">🧱</div>
+                        <h3>Network Security (NSE 1)</h3>
+                        <p>Fundamental Edition</p>
+                        <span class="credential__issuer mono">Fortinet</span>
+                    </div>
+                    <div class="credential__card">
+                        <div class="credential__icon">🔍</div>
+                        <h3>Introduction to OSINT</h3>
+                        <p>Open Source Intelligence</p>
+                        <span class="credential__issuer mono">Certified</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 8: Contact ===== -->
+        <section id="contact" class="section section--contact">
+            <div class="section__container">
+                <div class="section__header">
+                    <span class="section__number mono">08</span>
+                    <h2 class="section__title" data-animate="reveal">Establish Connection</h2>
+                </div>
+                <div class="contact__content">
+                    <p class="contact__prompt mono" data-animate="typing">> let's connect_</p>
+                    <p class="contact__description">Open to AI system design, assessment integrity research,
+                        forensic-driven analytics, and AI education roles.</p>
+                    <div class="contact__links">
+                        <a href="mailto:workmail.namanjain@gmail.com" class="contact__link" id="contact-email">
+                            <span class="contact__link-icon">✉</span>
+                            <span class="contact__link-label">Email</span>
+                            <span class="contact__link-value mono">workmail.namanjain@gmail.com</span>
+                        </a>
+                        <a href="https://linkedin.com/in/namanjain-cyber" target="_blank" rel="noopener"
+                            class="contact__link" id="contact-linkedin">
+                            <span class="contact__link-icon">in</span>
+                            <span class="contact__link-label">LinkedIn</span>
+                            <span class="contact__link-value mono">namanjain-cyber</span>
+                        </a>
+                        <a href="tel:+917457875868" class="contact__link" id="contact-phone">
+                            <span class="contact__link-icon">📞</span>
+                            <span class="contact__link-label">Phone</span>
+                            <span class="contact__link-value mono">+91 7457875868</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact__footer">
+                    <p class="mono">This portfolio is evidence-driven, version-controlled, and continuously evolving.
+                    </p>
+                    <p class="contact__tagline"><strong>Truth survives scrutiny.</strong></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
