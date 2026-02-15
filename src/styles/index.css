@@ -2191,6 +2191,10 @@ body.has-modal {
   overflow: hidden;
 }
 
+body.has-modal #experience {
+  z-index: 1000; /* Float above all other sections */
+}
+
 /* Modal Overlay Background - Softened */
 .experience__overlay {
   position: fixed;
