@@ -180,20 +180,18 @@ export function initScrollAnimations() {
         ease: 'power3.out',
     });
 
-    // --- Findings (cinematic reveals) ---
-    gsap.utils.toArray('.findings__statement').forEach((statement, i) => {
-        gsap.from(statement, {
-            scrollTrigger: {
-                trigger: statement,
-                start: 'top 80%',
-                toggleActions: 'play none none none',
-            },
-            y: 60,
-            opacity: 0,
-            duration: 1,
-            delay: i * 0.1,
-            ease: 'power3.out',
-        });
+    // --- Field Operations (Experience) ---
+    gsap.from('.experience__item', {
+        scrollTrigger: {
+            trigger: '.experience__grid',
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+        },
+        y: 30,
+        opacity: 0,
+        duration: 0.7,
+        stagger: 0.15,
+        ease: 'power3.out',
     });
 
     // --- Credentials ---
@@ -213,8 +211,8 @@ export function initScrollAnimations() {
     // --- Contact ---
     gsap.from('.contact__prompt', {
         scrollTrigger: {
-            trigger: '.contact__content',
-            start: 'top 80%',
+            trigger: '.section--contact',
+            start: 'top 85%',
         },
         y: 30,
         opacity: 0,
@@ -224,8 +222,8 @@ export function initScrollAnimations() {
 
     gsap.from('.contact__description', {
         scrollTrigger: {
-            trigger: '.contact__content',
-            start: 'top 75%',
+            trigger: '.section--contact',
+            start: 'top 80%',
         },
         y: 20,
         opacity: 0,
@@ -237,9 +235,9 @@ export function initScrollAnimations() {
     gsap.from('.contact__link', {
         scrollTrigger: {
             trigger: '.contact__links',
-            start: 'top 85%',
+            start: 'top 95%',
         },
-        x: -30,
+        y: 20,
         opacity: 0,
         duration: 0.5,
         stagger: 0.12,

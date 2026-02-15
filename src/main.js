@@ -4,7 +4,10 @@ import { initScrollAnimations } from './js/animations/ScrollAnimations.js';
 import { CursorEffects } from './js/animations/CursorEffects.js';
 import { InteractiveEffects } from './js/interactions/InteractiveEffects.js';
 import { EEGWaveform } from './js/components/EEGWaveform.js';
+import { VoiceAnalyzer } from './js/components/VoiceAnalyzer.js';
+import { HexDataStream } from './js/components/HexDataStream.js';
 import { initCaseFiles } from './js/components/CaseFiles.js';
+import { initExperienceInteractions } from './js/components/ExperienceInteractions.js';
 
 /**
  * Main Entry Point
@@ -64,8 +67,17 @@ async function init() {
     // Initialize EEG waveform
     new EEGWaveform('eeg-canvas');
 
+    // Initialize Voice analyzer for Case 001
+    new VoiceAnalyzer('voice-canvas');
+
+    // Initialize Hex stream for Case 002
+    new HexDataStream('hex-canvas');
+
     // Initialize case file interactions
     initCaseFiles();
+
+    // Initialize internship card interactions
+    initExperienceInteractions();
 
     // Initialize interactive pipeline tabs
     const pipelineTabs = document.querySelectorAll('.pipeline__tab');
