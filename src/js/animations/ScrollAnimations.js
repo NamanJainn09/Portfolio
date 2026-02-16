@@ -60,13 +60,14 @@ export function initScrollAnimations() {
         gsap.from(title, {
             scrollTrigger: {
                 trigger: title,
-                start: 'top 85%',
+                start: 'top 90%',
                 toggleActions: 'play none none none',
+                scrub: 1,
             },
-            y: 40,
+            y: 30,
             opacity: 0,
-            duration: 0.8,
-            ease: 'power3.out',
+            duration: 1.2,
+            ease: 'power2.out',
         });
     });
 
@@ -74,13 +75,14 @@ export function initScrollAnimations() {
         gsap.from(num, {
             scrollTrigger: {
                 trigger: num,
-                start: 'top 85%',
+                start: 'top 90%',
                 toggleActions: 'play none none none',
+                scrub: 1,
             },
             x: -20,
             opacity: 0,
-            duration: 0.6,
-            ease: 'power3.out',
+            duration: 1,
+            ease: 'power2.out',
         });
     });
 
@@ -146,13 +148,15 @@ export function initScrollAnimations() {
     gsap.from('.evidence__card', {
         scrollTrigger: {
             trigger: '.evidence__scroll-track',
-            start: 'top 90%',
-            toggleActions: 'play none none none',
+            start: 'top 95%',
+            end: 'top 30%',
+            scrub: 1.5,
         },
-        x: 60,
-        duration: 0.6,
-        stagger: 0.12,
-        ease: 'power3.out',
+        x: 100,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.1,
+        ease: 'power2.out',
     });
 
     // --- Interactive Pipeline ---

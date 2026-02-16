@@ -22,8 +22,9 @@ export function initExperienceInteractions() {
             width: state.width,
             height: state.height,
             opacity: 0,
-            duration: 0.5,
-            ease: 'power3.inOut',
+            scale: 0.9,
+            duration: 0.7,
+            ease: 'expo.inOut',
             onComplete: () => {
                 details.style.visibility = 'hidden';
                 details.style.pointerEvents = 'none';
@@ -32,7 +33,7 @@ export function initExperienceInteractions() {
             }
         });
 
-        gsap.to(overlay, { opacity: 0, visibility: 'hidden', duration: 0.4 });
+        gsap.to(overlay, { opacity: 0, visibility: 'hidden', duration: 0.5, ease: 'power2.inOut' });
         document.body.classList.remove('has-modal');
     };
 
@@ -55,6 +56,7 @@ export function initExperienceInteractions() {
                 width: startRect.width,
                 height: startRect.height,
                 opacity: 0,
+                scale: 0.9,
                 visibility: 'visible',
                 pointerEvents: 'auto'
             });
@@ -69,11 +71,28 @@ export function initExperienceInteractions() {
                 width: 'min(90%, 650px)',
                 height: 'auto',
                 opacity: 1,
-                duration: 0.6,
+                scale: 1,
+                duration: 0.8,
                 ease: 'expo.out'
             });
 
-            gsap.to(overlay, { opacity: 1, visibility: 'visible', duration: 0.4 });
+            // Animate internal content
+            const inner = details.querySelector('.experience__details-inner');
+            const elements = inner.querySelectorAll('.experience__meta, .experience__role, .experience__bullets li');
+            
+            gsap.fromTo(elements, 
+                { opacity: 0, y: 15 },
+                { 
+                    opacity: 1, 
+                    y: 0, 
+                    duration: 0.6, 
+                    stagger: 0.05, 
+                    ease: 'power2.out',
+                    delay: 0.2 
+                }
+            );
+
+            gsap.to(overlay, { opacity: 1, visibility: 'visible', duration: 0.6, ease: 'power2.out' });
         });
 
         if (closeBtn) {

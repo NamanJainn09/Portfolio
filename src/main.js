@@ -1,3 +1,5 @@
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Scene } from './js/webgl/Scene.js';
 import { ParticleField } from './js/webgl/ParticleField.js';
 import { initScrollAnimations } from './js/animations/ScrollAnimations.js';
@@ -40,6 +42,30 @@ async function simulateLoading() {
 
 // --- Init All Systems ---
 async function init() {
+    // 1. Initialize Lenis Smooth Scroll
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: 'vertical',
+        gestureOrientation: 'vertical',
+        smoothWheel: true,
+        wheelMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false,
+    });
+
+    // Synchronize Lenis with ScrollTrigger
+    lenis.on('scroll', () => {
+        ScrollTrigger.update();
+    });
+
+    gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
+
     // Start loading animation
     simulateLoading();
 
@@ -93,13 +119,17 @@ async function init() {
         });
     });
 
-    // Smooth scroll for anchor links
+    // Smooth scroll for anchor links using Lenis
     document.querySelectorAll('a[href^="#"]').forEach((link) => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            const target = document.querySelector(link.getAttribute('href'));
+            const target = link.getAttribute('href');
             if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                lenis.scrollTo(target, {
+                    offset: 0,
+                    duration: 1.5,
+                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                });
             }
         });
     });

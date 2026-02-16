@@ -28,3 +28,12 @@ Description:
 • Cleaned, structured, and analyzed research datasets, creating clear visualizations (graphs/ charts) to communicate insights for technical and non-technical audiences.
 • Supported experimental workflows using Python-based libraries such PsychoPy and PyGaze for data collection and behavioral analysis. Compiled datasets, maintained structured spreadsheets, and delivered timely analytical reports to support ongoing studies.
 
+**Jpee Drugs**
+Duration: 06/2023 - 07/2023
+Role: QC/QA Intern
+Location: Haridwar, Uttarakhand
+Description:
+• Conducted qualitative and quantitative tests to measure sample purity.
+• Maintained meticulous records, logs, and reports, ensuring audit-ready documentation.
+• Developed a strong understanding of data integrity, traceability, and reproducibility, essential for regulatory inspections.
+

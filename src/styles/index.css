@@ -104,7 +104,6 @@
 
 html {
   font-size: 16px;
-  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -2068,8 +2067,8 @@ body:not(:hover) .custom-cursor {
   color: var(--text-tertiary);
 }
 
-.case__card.is-open .case__toggle::after {
-  content: ' (collapse)';
+.case__card.is-open .case__toggle:hover {
+  color: white;
 }
 
 .case__eeg-canvas {

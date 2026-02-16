@@ -1,3 +1,5 @@
+import gsap from 'gsap';
+
 /**
  * Advanced Cursor Effects — Active Theory inspired
  * Morphing cursor shape, click ripple, magnetic pull, trail particles
@@ -20,7 +22,9 @@ export class CursorEffects {
         this.initTrail();
 
         this.bindEvents();
-        this.animate();
+        
+        // Use GSAP Ticker for better performance and synchronization
+        gsap.ticker.add(() => this.update());
     }
 
     initTrail() {
@@ -120,10 +124,11 @@ export class CursorEffects {
         ).onfinish = () => ripple.remove();
     }
 
-    animate() {
-        // Smooth interpolation — slower = more fluid
-        this.pos.x += (this.target.x - this.pos.x) * 0.12;
-        this.pos.y += (this.target.y - this.pos.y) * 0.12;
+    update() {
+        // Smooth interpolation — higher = snappier
+        // Boosted to 0.35 for maximum responsiveness
+        this.pos.x += (this.target.x - this.pos.x) * 0.35;
+        this.pos.y += (this.target.y - this.pos.y) * 0.35;
 
         if (this.cursor) {
             this.cursor.style.transform = `translate(${this.pos.x}px, ${this.pos.y}px)`;
@@ -133,13 +138,11 @@ export class CursorEffects {
         let prevX = this.pos.x;
         let prevY = this.pos.y;
         for (const trailDot of this.trail) {
-            trailDot.x += (prevX - trailDot.x) * 0.3;
-            trailDot.y += (prevY - trailDot.y) * 0.3;
+            trailDot.x += (prevX - trailDot.x) * 0.6;
+            trailDot.y += (prevY - trailDot.y) * 0.6;
             trailDot.el.style.transform = `translate(${trailDot.x}px, ${trailDot.y}px) translate(-50%, -50%)`;
             prevX = trailDot.x;
             prevY = trailDot.y;
         }
-
-        requestAnimationFrame(() => this.animate());
     }
 }
