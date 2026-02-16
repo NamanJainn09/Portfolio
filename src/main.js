@@ -1,5 +1,8 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 import { Scene } from './js/webgl/Scene.js';
 import { ParticleField } from './js/webgl/ParticleField.js';
 import { initScrollAnimations } from './js/animations/ScrollAnimations.js';
@@ -66,8 +69,8 @@ async function init() {
 
     gsap.ticker.lagSmoothing(0);
 
-    // Start loading animation
-    simulateLoading();
+    // Start and wait for loading animation
+    await simulateLoading();
 
     // Initialize Three.js scene
     const canvas = document.getElementById('webgl-canvas');
@@ -78,11 +81,14 @@ async function init() {
         scene.startLoop();
     }
 
-    // Wait for loading to complete
-    await new Promise((resolve) => setTimeout(resolve, 2200));
-
     // Initialize GSAP scroll animations
     initScrollAnimations();
+
+    // Final refresh once everything is hidden and loaded
+    ScrollTrigger.refresh();
+    window.addEventListener('load', () => {
+        ScrollTrigger.refresh();
+    });
 
     // Initialize custom cursor
     new CursorEffects();

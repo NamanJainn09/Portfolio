@@ -57,33 +57,37 @@ export function initScrollAnimations() {
 
     // --- Section headers ---
     gsap.utils.toArray('.section__title').forEach((title) => {
-        gsap.from(title, {
-            scrollTrigger: {
-                trigger: title,
-                start: 'top 90%',
-                toggleActions: 'play none none none',
-                scrub: 1,
-            },
-            y: 30,
-            opacity: 0,
-            duration: 1.2,
-            ease: 'power2.out',
-        });
+        gsap.fromTo(title, 
+            { y: 30, opacity: 0 },
+            {
+                scrollTrigger: {
+                    trigger: title,
+                    start: 'top 90%',
+                    toggleActions: 'play none none none',
+                },
+                y: 0,
+                opacity: 1,
+                duration: 1.2,
+                ease: 'power3.out',
+            }
+        );
     });
 
     gsap.utils.toArray('.section__number').forEach((num) => {
-        gsap.from(num, {
-            scrollTrigger: {
-                trigger: num,
-                start: 'top 90%',
-                toggleActions: 'play none none none',
-                scrub: 1,
-            },
-            x: -20,
-            opacity: 0,
-            duration: 1,
-            ease: 'power2.out',
-        });
+        gsap.fromTo(num, 
+            { x: -20, opacity: 0 },
+            {
+                scrollTrigger: {
+                    trigger: num,
+                    start: 'top 90%',
+                    toggleActions: 'play none none none',
+                },
+                x: 0,
+                opacity: 1,
+                duration: 1,
+                ease: 'power3.out',
+            }
+        );
     });
 
     // --- Profile section ---
@@ -145,19 +149,23 @@ export function initScrollAnimations() {
     });
 
     // --- Evidence cards ---
-    gsap.from('.evidence__card', {
-        scrollTrigger: {
-            trigger: '.evidence__scroll-track',
-            start: 'top 95%',
-            end: 'top 30%',
-            scrub: 1.5,
-        },
-        x: 100,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.1,
-        ease: 'power2.out',
-    });
+    if (document.querySelector('.evidence__card')) {
+        gsap.fromTo('.evidence__card', 
+            { x: 60, opacity: 0 },
+            {
+                scrollTrigger: {
+                    trigger: '.section--evidence',
+                    start: 'top 85%',
+                    toggleActions: 'play none none none',
+                },
+                x: 0,
+                opacity: 1,
+                duration: 1,
+                stagger: 0.15,
+                ease: 'power3.out',
+            }
+        );
+    }
 
     // --- Interactive Pipeline ---
     gsap.from('.pipeline__tab', {
